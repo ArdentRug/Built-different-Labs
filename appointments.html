@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule an Appointment - Built Different Labs</title>
+    <meta name="description" content="Book your dietary consultation or health testing appointment online or in-person.">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="project.html">Built Different Labs</a>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="checkups.html">Health Checkups</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="memberships.html">Memberships</a></li>
+                    <li><a href="appointments.html" class="current-page">Appointments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Schedule Your Appointment</h1>
+        <p>Take the next step in your health journey. You can book an in-person visit at our clinic or schedule a virtual consultation with one of our specialists.</p>
+        
+        <div class="appointment-options">
+            <section class="appointment-col">
+                <h2>In-Person Appointments</h2>
+                <p>Visit our clinic for all testing services, including blood draws and physical assessments. Our staff provides a comfortable and professional environment.</p>
+                <p><strong>Location:</strong>  Wellness Way, Healthville, India</p>
+            </section>
+            
+            <section class="appointment-col">
+                <h2>Online Consultations</h2>
+                <p>Meet with our nutritionists and dietary consultants from the comfort of your home. We review test results, create diet plans, and provide guidance via secure video call.</p>
+                <p><strong>Note:</strong> Some services, like blood testing, require an initial in-person visit.</p>
+            </section>
+        </div>
+        
+        <hr>
+
+        <section class="appointment-form-container">
+            <h2>Request an Appointment Time</h2>
+            <p>Please fill out the form below to request your preferred time. Our team will contact you within one business day to confirm your appointment.</p>
+
+            <form action="#" method="post" class="appointment-form">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="user_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="user_email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="user_phone">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Appointment Details</legend>
+                    <div class="form-group">
+                        <p class="form-label">Preferred Appointment Type</p>
+                        <label class="radio-label">
+                            <input type="radio" name="appt_type" value="in_person" checked> In-Person Visit
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="appt_type" value="online"> Online Consultation
+                        </label>
+                    </div>
+
+                    <div class="form-group-split">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="appt_date" min="2025-01-01" max="2026-12-31">
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" id="time" name="appt_time">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service of Interest (Optional)</label>
+                        <select id="service" name="service">
+                            <option value="">--Please choose an option--</option>
+                            <option value="nutrition">Nutrition Consultation</option>
+                            <option value="checkup">Health Checkup Panel</option>
+                            <option value="drug_test">Workplace Drug Test</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes or Questions</label>
+                        <textarea id="notes" name="user_notes" rows="4"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Consent</legend>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            I acknowledge that I am submitting this request and agree to be contacted by NutriTest Labs. I understand this form is for request purposes only and my appointment is not confirmed until I receive a confirmation. I consent to the <a href="contact.html#privacy" target="_blank">Privacy Policy</a>.
+                        </label>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="button button-primary">Submit Appointment Request</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Built Different Labs</h3>
+                    <p> Wellness Way<br>
+                    #5745<br>
+                    Healthville, India</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="project.html">Home</a></li>
+                        <li><a href="appointments.html">Book Appointment</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal & Privacy</h3>
+                    <ul>
+                        <li><a href="contact.html#privacy">Privacy Policy</a></li>
+                        <li><a href="contact.html#accessibility">Accessibility</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>(c) 2025 Built Different Labs. All rights reserved.</p>
+                <p><strong>Disclaimer:</strong> Content on this website is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
