@@ -28,24 +28,46 @@ document.addEventListener('DOMContentLoaded', function() {
         tierForms[i].addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const card = this.parentElement;
-            const title = card.querySelector('h2').innerText;
+            
+            const allCards = document.querySelectorAll('.tier-card');
+            
+            for (let j = 0; j < allCards.length; j++) {
+                allCards[j].style.backgroundColor = "#ffffff";
+                allCards[j].style.borderColor = "#dddddd";
+            }
 
-            alert("Welcome! You joined the " + title + " membership.");
+            
+            const activeCard = this.parentElement;
+            
+            
+            activeCard.style.backgroundColor = "#e6f0f2";
+            activeCard.style.borderColor = "#007a99";
+
+            const title = activeCard.querySelector('h2').innerText;
+
+            alert("You have selected the " + title + " plan.");
         });
     }
 
-    const buyBtns = document.querySelectorAll('.product-detail .button-primary');
-
-    buyBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const container = btn.parentElement;
-            const productTitle = container.querySelector('h2').innerText;
-
-            alert("Added " + productTitle + " to your cart.");
-        });
-    });
-
 });
+const factButton = document.getElementById('fact-btn');
+    const factText = document.getElementById('fact-text');
+
+    if (factButton) {
+        const facts = [
+            "Dehydration can decrease physical performance.",
+            "Almonds are a great source of Vitamin E.",
+            "Your body absorbs more iron from plants if you eat Vitamin C.",
+            "Broccoli has more Vitamin C than oranges.",
+            "Dark chocolate is high in antioxidants.",
+            "Eating slowly helps your digestion.",
+            "Avocados are a fruit, not a vegetable.",
+            "Green tea can improve brain function.",
+            "Eggs are a complete protein source."
+        ];
+
+        factButton.addEventListener('click', function() {
+            let randomIndex = Math.floor(Math.random() * facts.length);
+            factText.innerText = facts[randomIndex];
+        });
+    }
